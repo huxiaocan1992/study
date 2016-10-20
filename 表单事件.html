@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/EventUtil.js"></script>
+	</head>
+	<body>
+		<form action="DOM2级事件变动.html" method="get" id="dorm">
+			<input type="submit" id="submit" value="提交" />
+		</form>
+		<script type="text/javascript">
+			EventUtil.addEventListener(window,'load',function(e){
+				e=EventUtil.getEvent(e);
+				sum=document.getElementById("submit")
+				var keyCode=0;
+				
+					form=document.getElementById("dorm")
+				EventUtil.addEventListener(sum,'keypress',function(event){
+					//取得事件对象
+					event = EventUtil.getEvent(event);
+						//阻止表单重置
+					//EventUtil.preventDefault(event);
+					keyCode=event.keyCode;
+					if(keyCode==13){
+						form.submit();
+					}
+				})
+			})
+		</script>
+	</body>
+</html>

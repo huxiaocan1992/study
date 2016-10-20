@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function Point(x,y){
+				this.x=x;
+				this.y=y;
+			}
+			Point.prototype.r=function(){
+				alert( Math.sqrt(
+					this.x*this.x+this.y*this.y
+				))
+			}
+			
+			var p=new Point(2,1);
+			p.r();
+		</script>
+	</body>
+</html>

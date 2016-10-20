@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div style="width: 200px; height: 20px; background: orange;">
+			<input type="text" value="ee" />
+		</div>
+		<script type="text/javascript">
+//		以字母开头,总长度(5~20),后面的可有字母数字下划线,符合条件返回1否则返回0
+//			var r=/^[a-zA-Z]{1}[a-zA-Z0-9_]{4,19}$/;
+//			function checkStr(str){
+//				if(r.test(str)){
+//					console.log(1);
+//				}else{
+//					console.log(0);
+//				}
+//			}
+//			checkStr("eee7869e_d");
+
+//用JavaScript实现，鼠标点击页面中的任意标签，alert该标签的名称
+		
+		document.onclick=function(e){
+			var e=e || window.event
+			alert(e.target.tagName.toLowerCase())
+		}
+
+//		var s1="aba";
+//		var s2=new String(s1);
+//		s1.color="blue";
+//		s2.color="red";
+//		console.log(s1===s2,s1.color,s2.color)
+
+//定义一个函数
+//		function repeat(func,num,times,str){
+//				var i=0;
+//				var timer=setInterval(function(){
+//					if(i<num){
+//						func(str);	
+//					}
+//					else{
+//						clearInterval(timer);
+//					}
+//					i++;
+//				},times)
+//			
+//		}
+//		var a=repeat(alert,6,3000);
+//		a("您好")
+		</script>
+	</body>
+</html>

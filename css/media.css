@@ -1,0 +1,30 @@
+#wrapper{
+	width:960px;
+	margin:0px auto;
+}
+#header{
+	width: 940px;
+	margin:0px auto;
+	background: #779307;
+}
+#navigation ul li{
+	display: inline-block;
+}
+#sidebar{
+	float: left;
+	margin: 0px auto;
+	background: #fe9c00;
+	width: 220px;
+}
+#content{
+	float: right;
+	margin:0px auto;
+	width: 700px;
+	background: #dedede;
+}
+#footer{
+	margin:0px auto;
+	clear: both;
+	background: #630;
+	width: 940px;
+}
