@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../asses/jquery-2.0.0.min.js" ></script>
+	</head>
+	<body>
+		<div id="ajax">
+			
+		</div>
+	</body>
+	<script>
+		$(function(){
+			$.ajax({
+				type:"get",
+				url:"indexJson.json",
+				datatype:"json",
+				error:function(data){
+					alert('加载失败');
+				},
+				success:function(datas){
+					var s=datas.programmers[1];
+					alert(s.firstName)
+				}
+			})
+		})
+	</script>
+</html>
