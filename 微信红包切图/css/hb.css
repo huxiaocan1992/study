@@ -1,0 +1,41 @@
+/*通用*/
+* {
+	-webkit-box-sizing: border-box;
+}
+body {margin: 0 auto;padding: 0;font-family: "微软雅黑";font-size: 14px;}
+img {border: none;vertical-align: middle;}
+input[type='submit'] {-webkit-appearance: none;outline: none}
+input[type='button'] {-webkit-appearance: none;outline: none}
+input[type='search'] {-webkit-appearance: none;outline: none}
+input, select {vertical-align: middle;border: 0;margin: 0;padding: 0;}
+ul, li, ol {list-style: none;margin: 0;padding: 0;border: 0}
+dl, dt, dd {margin: 0;padding: 0;border: 0}
+a {text-decoration: none;}
+p {margin: 0;padding: 0;border: 0}
+.clear {clear: both}
+textarea {resize: none}
+a:link, a:hover, a:visited, a:active {color: #000;}
+img{border:none}
+
+
+/*抢红包*/
+.red_envelope .hongbao_s{text-align:center;position:relative}
+.red_envelope .hongbao_s img{width:80%;margin-top:30px}
+.red_envelope .hongbao_contact{position:absolute;top:110px;left:50%;
+-webkit-transform: translate(-50%, -50%);
+-moz-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%)
+ }
+ .red_envelope .Head_portrait img{width:64px}
+ .hongbao_contact .nickname{margin-top:10px;font-size:16px;color:#ffab09}
+.hongbao_s .rob_botton{position:absolute;bottom:-10px;left:50%;
+-webkit-transform: translate(-50%, -50%);
+-moz-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%)}
+.hongbao_s .rob_botton img{width:80%;}
+.rob_botton p input{margin-right:8px}
+.rob_botton p span{color:#ffa200}
+.anniu ul{text-align:center}
+.anniu ul li{background:#fde8b5;display:inline-block;padding:10px 30px;margin:0 8px;border-radius:4px;color:#7f6c3e;font-size:15px}
+.bottom_bg{position:absolute;bottom:0;}
+.bottom_bg img{width:100%}

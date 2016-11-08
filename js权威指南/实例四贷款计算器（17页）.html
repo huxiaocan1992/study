@@ -6,7 +6,7 @@
 		<style>
 			.output{font-weight: bold;}
 			#payment{text-decoration: underline;}
-			#graph{border: 1pa solid #000;}
+			#graph{border: 1px solid #000;}
 			th,td{vertical-align: top;}
 		</style>
 		<script type="text/javascript" src="js/贷款计算器.js" ></script>
@@ -76,7 +76,7 @@
 		var payments=parseFloat(years.value)*12;
 		var x=Math.pow(1+interest,payments);
 		var monthly=(principal*x*interest)/(x-1);
-		if(isFinite(mothly)){
+		if(isFinite(monthly)){
 			payment.innerHTML=monthly.toFixed(2);
 			total.innerHTML=(monthly*payments).toFixed(2);
 			totalinterest.innerHTML=((monthly*payments)-principal).toFixed(2);
@@ -137,7 +137,7 @@
 		if(arguments.length==0 || !graph.getContext) return;
 		var g=graph.getContext("2d");
 		var width=graph.width,
-		height.graph.height;
+		height=graph.height;
 		function paymentTox(n){
 			return n*width/payments;
 		}
@@ -196,5 +196,6 @@
 				g.fillRect(rightEdge-3,y-0.5,3,1);
 				g.fillText(String(ticks[i].toFixed(0)),rightEdge-5,y);
 			}
+		}
 	}
 </script>

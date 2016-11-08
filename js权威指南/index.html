@@ -6,9 +6,71 @@
 		<link rel="stylesheet" href="css/index.css" />
 		<script type="text/javascript" src="js/index.js" ></script>
 		<script>
-			jct(5);
+			//alert([1,2,3].toString());
+			//alert((function(x){f(x);}).toString());
+			/*var scope="global scope";
+			function checkscope(){
+				var scope="local scope";
+				function nested(){
+					var scope="nested scope";
+					console.log(scope) ;
+				}
+				console.log(scope) ;
+				return nested();
+			}
+			checkscope()*/
+			
+			/*function test(a){
+				var i=0;
+				if(a>10){
+					var j=5;
+					for(var k=0;k<10;k++){
+						console.log(k);
+					}
+					console.log(k);
+				}
+				console.log(j);
+			}
+			test(11);*/
+			
+			//85页  关于eval()函数的操作
+			/*var geval=eval;
+			var x="hxcx",y="hxcy";
+			function f(){
+				var x="hxclx";
+				eval('x+="01";');
+				return x;
+			}
+			function g(){
+				var y="hxcly";
+				geval('y+="02";');
+				return y;
+			}
+			console.log(f(),x);
+			console.log(g(),y);*/
+			
+			//其他操作符
+				//delete
+			/*var o={x:0,y:0};
+			delete o.x;
+			alert(o);*/
+			/*for(var i=0,j=10;i<j;i++,j--){
+				console.log(i);
+				console.log(j);
+				console.log(i+j);
+			}*/
+			
+			//第五章 break
+			/*var i=0;
+			while(i=0){
+					break mass;
+			}			
+			mass:console.log("跳转到这里");*/
+			var matrix=[[1,2,3],[3,3,2],['s',1,2]]
 		</script>
 	</head>
 	<body>
+		<a href="javascript:void window.open();">打开一个新窗口</a>
+		<a href="#" onclick="window.close()">关闭窗口</a>
 	</body>
 </html>

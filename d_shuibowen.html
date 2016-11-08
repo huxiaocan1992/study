@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="asses/jquery-2.0.0.js" ></script>
+		<script>
+			$(function(e){
+				var n=0,t=100,num=0;
+				function toleft(){
+					if(n>-200){
+						$(".circle img").css({
+							left:n--
+						})
+					}else{	n=0;}
+				}
+				 var tleft=setInterval(toleft,3);
+				 
+				 function totop(){
+				 	if(t>0){
+				 		$(".circle img").css({
+				 			top:t--
+				 		})
+				 	}else{t=100;}
+				 }
+				var ttop=setInterval(totop,100);
+				
+				function numup(){
+					if(num<100){num++;
+					}else{num=0;}
+					$(".circle span").html(num+'%');
+				}
+				var tnum=setInterval(numup,100)
+			});
+		</script>
+		<style>
+			body{
+				background: black;
+			}
+			.circle{
+				left:50%;
+				margin-left: -100px;
+				background-color: rgba(0%,80%,100%,0.5);
+				width:200px;
+				height: 200px;
+				border-radius: 50%;
+				overflow: hidden;
+				position:relative
+			}
+			.circle img{
+				position: relative;
+				top:100px;
+				left:0px;
+			}
+			.circle span{
+				width: 80px;
+				position: absolute;
+				left:50%;
+				top:120px;
+				margin-left: -40px;
+				color: rgba(255,255,255,0.5);
+				font-size: 50px;
+				font-family: "arial, helvetica, sans-serif";
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="circle">
+			<img src="img/sbw.png" />
+			<span></span>
+		</div>
+	</body>
+</html>

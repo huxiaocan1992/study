@@ -11,19 +11,34 @@
 		</div>
 	</body>
 	<script>
+	
+		function GetJsonData() {
+			var json = {
+				"area": "上海 ",
+				"name": "xx",
+				"nameLike": "xxx",
+				"pageNo": "0"
+			};
+			return json;
+		}
 		$(function(){
 			$.ajax({
-				type:"get",
-				url:"indexJson.json",
+				type:"post",
+				url:"http://test.dakaqi.cn:3030/approve/address/queryAddressList?",
 				datatype:"json",
-				error:function(data){
+				contentType: 'application/json; charset=utf-8',
+				data:{
+					"area": "上海 "
+				},
+				error:function(datas){
 					alert('加载失败');
 				},
 				success:function(datas){
-					var s=datas.programmers[1];
-					alert(s.firstName)
+					
 				}
 			})
 		})
+
 	</script>
 </html>
+
