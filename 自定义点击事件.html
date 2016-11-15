@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>
+            RunJS 演示代码
+        </title>
+        <script type="text/javascript">
+            function autoclick(){
+                var lnk = document.getElementById("admin-fullscreen");
+                lnk.click();
+            }
+            onload = function(){
+                var lnk = document.getElementById("admin-fullscreen");
+                lnk.onclick = function(){
+                    alert("被点击");
+                }
+                setTimeout(autoclick, 1000);
+            }
+        </script>
+  </head>
+    <body>
+        <ul>
+            <li>
+                <a href="javascript:void(0);" id="admin-fullscreen">
+                    <span class="am-icon-arrows-alt">
+                    </span>
+                    <span class="admin-fullText">
+                        自定义点击一次
+                    </span>
+                </a>
+            </li>
+        </ul>
+  </body>
+</html>

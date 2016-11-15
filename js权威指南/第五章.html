@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			/*try{
+				var n=Number(prompt("请输入一个正整数",""));
+				var f=(n+1);
+				alert(n+"!="+f)
+			}catch(ex){
+				alert(ex)
+			}*/
+			//with语句
+			with(document.forms[0]){
+				name.value="";
+				email.value="";
+				address.value="";
+			}
+		</script>
+	</body>
+</html>
