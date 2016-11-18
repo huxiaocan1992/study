@@ -7,7 +7,7 @@
 	<body>
 		<script>
 			//inherit()函数
-			function inherut(p){
+			function inherit(p){
 				if(p==null){
 					throw TypeError();
 				}else{
@@ -20,6 +20,206 @@
 					return new f();
 				}
 			}
+			
+/*			//in判断对象中是否存在该方法，in可以区分不存在和值为undefined的属性
+			var o = inherit({y:2});
+			o.x=1;
+			console.log('x' in o);//true
+			console.log('y' in o);//true
+			console.log('toString' in o)//true
+			//hasOwnProperty()检测给定的明仔是否是对象的自有属性
+			console.log(o.hasOwnProperty('x'));//true
+			console.log(o.hasOwnProperty('y'));//false  y是继承来的
+			console.log(o.hasOwnProperty('toString'));//false  toString是继承来的
+			//propertyIsEnumerable()是hasOwnProperty()的增强版，只有检测到是自有属性且这个属性的可枚举性为true是它才返回true
+			console.log(o.propertyIsEnumerable('x'));//true
+			console.log(o.propertyIsEnumerable('y'));//false  y是继承来的不可枚举
+			console.log(o.propertyIsEnumerable('toString'));//false  toString是继承来的不可枚举
+			//in可以区分不存在和值为undefined的属性
+			var s={x:5};
+			s.x !== undefined;
+			s.y !== undefined;
+			console.log('x' in s);
+			console.log('y' in s);
+			if(s.x ===undefined && 'x' in s){
+				console.log('x是s的属性，但值为undefined');
+			}else{
+				console.log('x不是s的属性');
+			}
+*/
+
+/*
+		//用来枚举属性的对象工具函数
+		
+		//*把p中的可枚举的属性复制到o中，并返回o
+		//*如果o和p中含有同名属性，则覆盖o中的属性
+		//*这个函数并不处理getter和setter以及复制属性
+	//方法一：
+		function extend(o,p){
+			for(prop in p){//遍历p中的所有属性
+				o[prop] = p[prop];//将属性添加到o中
+			}
+			console.log(o)
+			return o;
+		}
+		var n={
+			x:1,
+			y:2,
+			a:4
+		}
+		var m={
+			d:'ss',
+			dd:'ddd'
+		}
+		extend(n,m);
+
+	//方法二
+		function merge(o,p){
+			for(prop in p){
+				if(o.hasOwnProperty[prop]) continue; //过滤掉已经在o中存在的属性
+				o[prop] = p[prop];
+			}
+			console.log(o);
+			return o;
+		}
+		var n={
+			x:1,
+			y:2,
+			a:4
+		}
+		var m={
+			d:'ss',
+			dd:'ddd',
+			x:71,
+			y:4
+		}
+		merge(n,m);
+
+
+	//方法三：
+		function restrict(o,p) {
+			for(prop in o){
+				if(!(prop in p)) delete o[prop] ;//如果p中不存在 则删除
+			}
+			console.log(o);
+			return o;
+		}
+		var n={
+			x:1,
+			y:2,
+			a:4
+		}
+		var m={
+			d:'ss',
+			dd:'ddd',
+			x:71,
+			y:4
+		}
+		restrict(n,m);
+
+
+	//方法四
+		function subtract(o,p) {
+			for(prop in p){
+				delete o[prop] ;//从o中删除（删除一个不存在的属性不会报错）
+			}
+			console.log(o);
+			return o;
+		}
+		var n={
+			x:1,
+			y:2,
+			a:4
+		}
+		var m={
+			d:'ss',
+			dd:'ddd',
+			x:71,
+			y:4
+		}
+		subtract(m,n);
+
+		//返回一个新对象，这个对象同时拥有o的属性和p的属性，如果o和p中有重名的属性，使用p中的属性值
+		function union(o,p){
+			console.log('union  '+extend(extend({},o),p))
+			return extend(extend({},o),p);
+		}
+		union(n,m);
+		//返回一个新对象，这个对象拥有同时在o和p中出现的属性，很像求o和p的交集，，但p中属性的值会被忽略
+		function intersection(o,p){
+			console.log('intersection  '+restrict(extend({},o),p))
+			return restrict(extend({},o),p);
+		}
+		intersection(n,m);
+		//返回一个数组，这个数组包涵的是o中可枚举的自有属性的名字
+		function keys(o){
+			if(typeof o !== 'object') throw TypeError();//参数必须是对象
+			var result = [];//将要返回的数组
+			for(var prop in o){//遍历所有可枚举的属性
+				if(o.hasOwnProperty(prop)){//判断是否是自有属性
+					result.push(prop);//将属性添加至数组中
+				}
+			}
+			console.log('keys  '+result)
+			return result;//返回这个数组
+		}
+		keys(m);
+*/
+/*		
+		//使用Object.defineProperty()设置属性的特性或者让新建的属性具有某种特性
+		var o={};
+		object.defineProperty(o,'x',{
+			value:1,
+			writable:true,//可写性
+			enumerable:false,//可枚举性
+			configurable:true//可配置型
+		})
+*/
+/*	
+	//复制属性的特性
+		//给Object.prototype添加一个不可枚举的extend()方法
+		//这个方法继承自调用它的对象，将作为参数传入的对象的属性一一复制
+		//除了值之外，也复制属性的所有特性，除非在目标对象中存在同名的属性
+		//参数对象的所有自有对象（包括不可枚举的属性）也会一一复制
+		Object.defineProperty(Object.prototype,
+			'extend',//定义Object.prototype.extend
+		{
+			writable:true,
+			enumerable:false,//将其定义为不可枚举的
+			configurable:true,
+			value:function(o) {//值就是这个函数
+				// 得到所有的自有属性，包括不可枚举属性
+				var names=Object.getOwnPropertyNames(o);
+				//遍历它们
+				for(var i = 0 ;i<names.length;i++){
+					//如果属性已经存在，则跳过
+					if(names[i] in this) continue;
+					var desc=Object.getOwnPropertyDescriptor(o,names[i]);
+					//用它给this创建一个属性
+					Object.defineProperty(this,names[i],desc);
+				}
+			}
+		})
+*/
+		
+		//classof()函数
+		function classof(o){
+			if(o === null) {
+				console.log("Null")
+				return "Null";
+			} 
+			if(o === undefined) {
+				console.log("Undefined")
+				return "Undefined";
+			}
+			console.log(Object.prototype.toString.call(o).slice(8,-1));
+			return Object.prototype.toString.call(o).slice(8,-1);//提取已返回字符串的第8位到倒数第二位之间的字符
+		}
+		classof("1");
+		classof(2);
+		classof(null);
+		classof(undefined);
+		classof("{x:1}");
 		</script>
 		
 	</body>

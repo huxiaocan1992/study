@@ -1,0 +1,92 @@
+@charset "utf-8";
+*{
+	padding:0px;
+	margin: 0px;
+}
+ul li{
+	list-style: outside none;
+}
+a{
+	text-decoration:none;
+}
+.none{
+	display: none;
+}
+#header{
+	width: 100%;
+	min-width: 1263px;
+	height: 70px;
+	background: #333;
+	text-shadow:0px 1px 10px rgba(0,0,0,.4);
+	position: relative;
+	z-index: 999;
+}
+#header .center{
+	width: 1263px;
+	margin: 0px auto;
+	overflow: hidden;
+}
+#header .logo{
+	width: 240px;
+	height: 70px;
+	background: url(images/logo.png);
+	float: left;
+	text-indent: -9999px;/*将标题上的文字向左移动9999个像素，这个就可以隐藏了*/
+}
+#header .link{
+	float: right;
+	width: 650px;
+	height: 70px;
+	line-height: 70px;
+}
+#header .link li{
+	width: 120px;
+	float: left;
+}
+#header .link a{
+	color: #eee;
+	display: block;
+	text-align: center;
+}
+#header .link li:hover, #header .link li.active{
+	background: #000;
+}
+
+#footer{
+	width: 100%;
+	min-width: 1263px;
+	background: #333;	
+	text-align: center;
+}
+#footer .top{
+	width: 1263px;
+	margin:10px auto;
+}
+#footer .bottom{
+	line-height: 80px;
+	height: 80px;
+	color: #777;
+	border-top: 1px solid #444;
+}
+#footer .top .area{
+	width: 400px;
+	text-align: left;
+	display: inline-block;
+	margin-left:10px;
+	color: #ccc;
+}
+#footer .top h2{
+	font-weight: normal;
+	padding: 20px 0px 4px 20px;
+	font-size: 24px;
+}
+#footer .top hr{
+	width: 90%;
+	border: 1px dashed #000;
+}
+#footer .top ul{
+	font-size: 18px;
+	color: #777;
+	line-height: 2;
+
+}

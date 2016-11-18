@@ -1,0 +1,100 @@
+#headerline{
+	width: 100%;
+	height: 300px;
+	min-width: 1263px;
+	background: linear-gradient(to right bottom,rgba(0,0,0,0.7), rgba(0,0,0,0)) ,url(images/search.jpg) no-repeat center;
+	position: relative;
+}
+#headerline .center{
+	width: 1263px;
+	height: 300px;
+	margin: 0px auto;
+}
+#headerline hgroup{
+	padding: 100px 0px 0px 50px;
+}
+#headerline h2{
+	color: #fff;
+	font-size: 36px;
+	letter-spacing: 1px;
+}
+#headerline h3{
+	color: #eee;
+	font-size: 24px;
+	letter-spacing: 1px;
+}
+
+#container{
+	width: 1263px;
+	margin: 30px auto;
+	overflow: hidden;
+}
+#container .sidebar{
+	width: 340px;
+	float: right;
+}
+#container .list{
+	width: 900px;
+	float: left;
+}
+#container .sidebox{
+	border:1px solid #eee;
+	margin: 0px 0px 10px 0px;
+	text-align: center;
+}
+#container .sidebox h2{
+	font-size: 20px;
+	font-weight: 100;
+	letter-spacing: 1px;
+	text-indent: 8px;
+	height: 40px;
+	line-height: 40px;
+	background: #fafafa;
+	color: #666;
+	text-align: left;
+	border-bottom: 1px solid #eee;
+}
+#container .tag{
+	padding: 10px 0px;
+}
+#container .tag a{
+	display: inline-block;
+	width: 100px;
+	height: 35px;
+	line-height: 35px;
+	margin: 2px 0px;
+	background: #eee;
+	color: #999;
+}
+#container .tag a:hover{
+	background: #aaa;
+	color: #666;
+} 
+#container .figure{
+	padding:10px 0px;
+}
+#container figure img{
+	width: 150px; 
+	height: 120px;
+}
+#container figure{
+	display: inline-block;;
+	padding: 4px;
+	color: #666;
+}
+#container .box{
+	padding: 10px 0px;
+}
+#container .box a{
+	display: inline-block;
+	width: 150px;
+	height: 40px;
+	line-height: 40px;
+	margin: 2px 0px;
+	background: #eee;
+	color: #999;
+}
+#container .box a:hover{
+	background: #458b00;
+	color: #323232;
+} 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+/*
+		var a1=[,,,];
+		var a2=new Array(3);
+		console.log(0 in a1);
+		console.log(0 in a2);
+*/
+	//数组的插入和删除
+	var a = [];
+	a.push("zero");//在a数组的末尾添加一个或多个元素
+	console.log(a);
+	a.push("one","two");
+	console.log(a);
+	a.unshift("-1");//在a数组的首部插入一个或多个元素
+	console.log(a);
+	a.unshift("0","1");
+	console.log(a);
+	console.log(a.length);
+	delete a[1];//删除a[1]的值 但数组的长度不会改变
+	console.log(a);
+	console.log(a.length);
+	a.pop();
+	console.log(a);//删除数组末尾的元素，长度会减小
+	a.shift();
+	console.log(a);//删除数组首部的元素，长度会减小
+	</script>
+</body>
+</html>
