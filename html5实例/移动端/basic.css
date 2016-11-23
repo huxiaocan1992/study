@@ -1,0 +1,198 @@
+@charset "utf-8";
+*{
+	padding:0px;
+	margin: 0px;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+}
+html{
+	font-size: 625%;
+}
+body{
+	font-size: 0.16rem;
+}
+ul li,ol{
+	list-style: outside none;
+}
+a{
+	text-decoration:none;
+}
+img{
+	display: block;
+	max-width: 100%;
+}
+.none{
+	display: none;
+}
+#header{
+	width:100%;
+	height:0.45rem;
+	background: #333;
+	font-size: 0.16rem;
+}
+
+#header .link{
+	height: 0.45rem;
+	line-height: .45rem;
+	overflow: hidden;
+}
+#header .link li{
+	width: 25%;
+	float: left;
+}
+#header .link a{
+	color: #eee;
+	display: block;
+	text-align: center;
+}
+#header .link li:hover, #header .link li.active{
+	background: #000;
+}
+#banner{
+	width: 100%;
+	max-width: 6.4rem;
+	margin:0px auto;
+}
+#footer{
+	width: 100%;
+	max-width:6.4rem;
+	color:#777;
+	margin: 0 auto;
+	background: #333;	
+	text-align: center;
+	font-size: .16rem;
+}
+#footer .top{
+	padding:0 0 0.05rem 0;
+}
+#footer .bottom{
+	line-height: 0.4rem;
+	height: 0.4rem;
+	color: #777;
+	border-top: 1px solid #444;
+}
+div{
+	box-sizing:border-box;
+}
+
+#search{
+	max-width: 6.4rem;
+	height: .33rem;
+	margin: 0 auto;
+	background: #ddd;
+	padding: .03rem 0 0 0;
+	position: relative;
+}
+#search .search{
+	width: 95%;
+	height: .27rem;
+	border-radius: 0.04rem;
+	border: 0;
+	outline: none;
+	background:#fff;
+	display: block;
+	margin: 0 auto;
+	padding: 0 0 0 0.1rem;
+}
+#search .button{
+	width: 0.5rem;
+	height: .27rem;
+	display: block;
+	outline: none;
+	color: #666;
+	border: 0;
+	border-top-right-radius: .04rem;
+	border-bottom-right-radius: .04rem;
+	background: #eee;
+	position: absolute;
+	top:0.03rem;
+	right:0;
+}
+
+#tour{
+	max-width: 6.4rem;
+	margin: 0 auto;
+}
+#tour .center h2{
+	font-size: 0.26rem;
+	color: #666;
+	text-align: center;
+	line-height: 1.8;
+}
+#tour .center h3{
+	font-size: 0.18rem;
+	color: #666;
+	text-align: center;
+	font-weight: 100;
+	line-height: 1.5;
+}
+#tour .container{
+	overflow: hidden;
+}
+#tour figure{
+	width: 50%;
+	float: left;
+	background: #eee;
+	margin: 0 0 .05rem 0;
+	font-size: .16rem;
+}
+#tour figure img{
+	padding: .02rem;
+	border-radius: .04rem;
+}
+#tour figcaption{
+	color: #666;
+	font-size: .16rem;
+	padding: .02rem .05rem;
+}
+#tour h4{
+	font-weight: 100;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow:ellipsis;
+}
+#tour figcaption p{	
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow:ellipsis;
+}
+#tour figcaption .info{
+	padding: .1rem 0 0 0 ;
+	font-size: .16rem;
+
+}
+#tour figcaption .price{
+	color: #f60;
+}
+#tour figcaption .price strong{
+	letter-spacing: .01rem;
+}
+#tour figcaption .sat{
+	float: right;
+	position: relative;
+	right: .05rem;
+	font-style:normal;
+}
+
+
+@media (min-width: 480px) and (max-width: 640px){
+	#tour .center h2{
+		font-size: 0.26rem;
+	}
+	#tour .center h3{
+		font-size: 0.18rem;
+	}
+	#footer,#tour .info,#tour figcaption{
+		font-size: .16rem;
+	}
+}
+@media (max-width: 480px){
+	#tour .center h2{
+		font-size: 0.2rem;
+	}
+	#tour .center h3{
+		font-size: 0.16rem;
+	}
+	#footer,#tour .info,#tour figcaption{
+		font-size: .13rem;
+	}
+}

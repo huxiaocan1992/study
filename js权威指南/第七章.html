@@ -12,6 +12,7 @@
 		console.log(0 in a1);
 		console.log(0 in a2);
 */
+/*
 	//数组的插入和删除
 	var a = [];
 	a.push("zero");//在a数组的末尾添加一个或多个元素
@@ -30,6 +31,30 @@
 	console.log(a);//删除数组末尾的元素，长度会减小
 	a.shift();
 	console.log(a);//删除数组首部的元素，长度会减小
+*/
+/*
+	//forEach()方法
+		var data = [1,2,3,4,5];//这是需要遍历的数组
+		var sumOfAquares = 0;//要得到的数据的平方和
+		data.forEach(function(x){
+			sumOfAquares +=x*x;
+		});
+		console.log(sumOfAquares);
+*/
+/*
+	//多维数组
+		var table = new Array(10);
+		for(var i=0; i<table.length;i++){
+			table[i]=new Array(10);
+		}
+		//初始化数组
+		for(var row=0;row<table.length;tow++){
+			for(var col=0; col<table[row].length;col++){
+				table[row][col]=row*col;
+			}
+		}
+*/
+	//ECMAScript5中的数组方法
 	</script>
 </body>
 </html>
