@@ -28,6 +28,9 @@ img{
 	height:0.45rem;
 	background: #333;
 	font-size: 0.16rem;
+	position: fixed;
+	top:0;
+	z-index:9999;
 }
 
 #header .link{
@@ -51,6 +54,7 @@ img{
 	width: 100%;
 	max-width: 6.4rem;
 	margin:0px auto;
+	padding-top:0.45rem;
 }
 #footer{
 	width: 100%;
@@ -173,6 +177,186 @@ div{
 	font-style:normal;
 }
 
+#headline{
+	max-width:6.4rem;
+	margin: 0 auto; 
+	padding:0.45rem 0 0 0;
+	position: relative;
+}
+#headline hgroup{
+	position: absolute;
+	left:0.1rem;
+	top:45%;
+}
+#headline hgroup h2{
+	letter-spacing: 0.01rem;
+	color: #fff;
+}
+#headline hgroup h3{
+	letter-spacing: 0.01rem;
+	color: #fff;
+}
+
+.list{
+	max-width: 6.4rem;
+	margin:0.15rem auto;
+	padding: 0.1rem;
+	color: #666;
+}
+.list h2{
+	line-height: 2;
+	border-bottom: 0.01rem dashed #999;
+	margin: 0 0 0.1rem 0;
+}
+.about p{
+	font-size: 0.16rem;
+	line-height: 1.5;
+	margin: 0.1rem 0;
+}
+.about address{
+	font-style: normal;
+	line-height: 2;
+	font-size: 0.16rem;
+	margin:0.1rem 0;
+}
+.information figure{
+	position: relative;
+	margin:0.15rem 0 0 0;
+}
+.information figure:after{/*清除浮动*/
+	content:'.';
+	display: block;
+	clear: both;
+	height: 0;
+	visibility:hidden;
+}
+.information figure img{
+	width: 50%;
+	float: left;
+}
+.information figure figcaption{
+	width: 48%;
+	float: right;
+}
+.information  h2.title{
+	border: none;
+	padding:0 0 0.05rem 0;
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp:1;
+	-webkit-box-orient:vertical;
+}
+.information  h3.nav_title{
+	font-weight: 100;
+	padding: 0;
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp:2;
+	-webkit-box-orient:vertical;
+}
+.information .price{
+	position: absolute;
+	bottom: 0;
+}
+.information .price strong{
+	font-size: .26rem;
+	color: #f60;
+}
+
+.ticket{
+	color: #666;
+}
+.ticket .type{
+	margin:.2rem 0 0 0;
+
+}
+.ticket fieldset{
+	border: none;
+}
+.ticket .type mark{
+	color: #fff;
+	background: #458b00;
+	padding: 0.05rem 0.08rem;
+	border-radius: 0.04rem;
+	margin: 0 0.1rem 0 0.16rem;
+}
+
+.ticket .submit{
+	display: block;
+	width: 30%;
+	background: #f60;
+	color: #fff;
+	border: 0;
+	cursor: pointer;
+	border-radius: .04rem;
+	padding: .05rem 0;
+	margin: 0 auto;
+}
+.ticket .form p{	
+	margin:.1rem 0 0 0;
+}
+.ticket .form label{
+}
+.ticket .form input{
+	width: 97%;
+	height: .2rem;
+	background: #fff;
+	border-radius: .04rem;
+	border: .01rem solid #ccc;
+	color: #666;
+	padding: .05rem;
+}
+.ticket .new{
+	
+}
+.ticket .new ul{
+	margin: .2rem 0 0 0;
+}
+.ticket .new ul li{
+	display: inline-block;
+	padding:.05rem .1rem;
+	cursor: pointer;
+}
+.ticket .new ul li:first-child{
+	padding-left: 0rem;
+}
+.ticket .new li:nth-child(2),.ticket .new li:hover{
+	background: #458b00;
+	border-radius: .04rem;
+	color: #fff;
+}
+.ticket table{
+	margin:  0.2rem 0 0 0;
+	width: 100%;
+	border: .01rem solid #ddd;
+	border-collapse: collapse;
+}
+.ticket table th{
+}
+.ticket table th,
+.ticket table td{
+	border-bottom: .01rem solid #ddd;
+	text-align: center;
+	padding: .05rem .08rem;
+}
+.ticket table tr:nth-child(2n),.ticket table tr:hover{
+	background: #fafafa;
+}
+.ticket table .price{
+	color: #f60;
+}
+.ticket .reserve{
+	display: block;
+	background: #f60;
+	border-radius: .04rem;
+	color: #fff;
+	margin: 0 auto;
+
+}
+.ticket .more{
+	color: #666;
+}
+
 
 @media (min-width: 480px) and (max-width: 640px){
 	#tour .center h2{
@@ -181,18 +365,30 @@ div{
 	#tour .center h3{
 		font-size: 0.18rem;
 	}
-	#footer,#tour .info,#tour figcaption{
+	#footer,#tour .info,#tour figcaption,#headline hgroup h3{
 		font-size: .16rem;
+	}
+	#headline hgroup h2{
+		font-size: 0.22rem;
+	}
+	.list h2{
+		font-size: .2rem;
 	}
 }
 @media (max-width: 480px){
 	#tour .center h2{
 		font-size: 0.2rem;
 	}
-	#tour .center h3{
+	#tour .center h3,#headline hgroup h2{
 		font-size: 0.16rem;
 	}
-	#footer,#tour .info,#tour figcaption{
+	#footer,#tour .info,#tour figcaption,.list,#headline hgroup h3{
 		font-size: .13rem;
+	}
+	.list h2{
+		font-size: .17rem;
+	}
+	.min{
+		display: none;
 	}
 }

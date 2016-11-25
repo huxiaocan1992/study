@@ -54,7 +54,55 @@
 			}
 		}
 */
+
+/*
 	//ECMAScript5中的数组方法
+		//1、forEach()方法
+		var data=[5,4,3,2,1];
+		var a=[];
+		data.forEach(function(v,i,d){//参数分别是数组元素、数组元素的索引和数组本身，后面两个可以省略;
+			a[i]=v+1;
+		});
+		console.log(a);//[6, 5, 4, 3, 2]
+
+		//2、map()方法
+		var data1=[1,2,3,4,5];
+		b=data1.map(
+			function(x){ return x*x;}
+		);
+		console.log(data1);//[1, 2, 3, 4, 5]
+		console.log(b);// [1, 4, 9, 16, 25]
+
+		//3、filter()方法
+		var data2=[1,2,3,4,5];
+		var c=data2.filter(function(x){
+			return x>3;
+		});
+		console.log(data2);// [1, 2, 3, 4, 5]
+		console.log(c);//[4,5]
+
+		//4、every()和some()方法
+		var data4=[1,2,3,4,5];
+		var d1=data4.every(function(x){
+			return x<6;
+		});
+		console.log(data4);//[1,2,3,4,5];
+		console.log(d1);//tire
+
+		var d2=data4.some(isNaN);//data4中是否存在非数值元素
+		console.log(d2);//false
+
+		//5、reduce()和reduceRight()方法
+
+*/
+	//检测类数组对象
+		function isArrauLike(o){
+			if(o && typeof o==="object" && isFinite(o.length) && o.length>=0 && o.length===Math.floor(o.length) && o.length<4294967296){
+				return true;
+			}else{
+				return false;
+			}
+		}
 	</script>
 </body>
 </html>
