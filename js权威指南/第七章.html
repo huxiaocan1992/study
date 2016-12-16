@@ -96,13 +96,17 @@
 
 */
 	//检测类数组对象
-		function isArrauLike(o){
+		function isArrayLike(o){
 			if(o && typeof o==="object" && isFinite(o.length) && o.length>=0 && o.length===Math.floor(o.length) && o.length<4294967296){
+				console.log(1);
 				return true;
 			}else{
+				console.log(2);
 				return false;
 			}
 		}
+		var s=[1,2,3,4];
+		isArrayLike(s);
 	</script>
 </body>
 </html>
