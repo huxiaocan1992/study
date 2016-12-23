@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
 		<script type="text/javascript" src="js/EventUtil.js"></script>
 	</head>
+
 	<body>
 		<input type="image" src="img/Hydrangeas.jpg">
 		<div id="myDiv">点击右键出现菜单栏</div>
 		<ul id="MyMenu" style="position:absolute;width:20px;color: skyblue; background: #008000; visibility:hidden;">
-			<li><a href="http://www.baidu.com">1</li>
-			<li><a href="http://www.baidu.com">1</li>
-			<li><a href="http://www.baidu.com">1</li>
-			<li><a href="http://www.baidu.com">1</li>
+			<li>
+				<a href="http://www.baidu.com">1</li>
+			<li>
+				<a href="http://www.baidu.com">1</li>
+			<li>
+				<a href="http://www.baidu.com">1</li>
+			<li>
+				<a href="http://www.baidu.com">1</li>
 		</ul>
 	</body>
+
 </html>
 <script type="text/javascript">
-	EventUtil.addEventListener(window,'load',function(e){
-		var divText=document.getElementById("myDiv");
-		var ulText=document.getElementById("MyMenu");
-		EventUtil.addEventListener(divText,'contextmenu',function(e){
-			e=EventUtil.getEvent(e);
-			EventUtil.preventDefault(e);//取消默认行为
-			
-			ulText.style.left=e.clientX+20+"px";
-			ulText.style.top=e.clientY -10+"px";
-			ulText.style.visibility="visible";
+	EventUtil.addEventListener(window, 'load', function(e) {
+		var divText = document.getElementById("myDiv");
+		var ulText = document.getElementById("MyMenu");
+		EventUtil.addEventListener(divText, 'contextmenu', function(e) {
+			e = EventUtil.getEvent(e);
+			EventUtil.preventDefault(e); //取消默认行为
+
+			ulText.style.left = e.clientX + 20 + "px";
+			ulText.style.top = e.clientY - 10 + "px";
+			ulText.style.visibility = "visible";
 		});
-		EventUtil.addEventListener(document,'click',function(e){
-			ulText.style.visibility="hidden";//当点击窗口的任意位置后，菜单自动隐藏
+		EventUtil.addEventListener(document, 'click', function(e) {
+			ulText.style.visibility = "hidden"; //当点击窗口的任意位置后，菜单自动隐藏
 		});
-	})
+	})s
 </script>

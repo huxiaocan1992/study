@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
 		<style>
-			*{
-				margin:0px;
-				padding:0px;
+			* {
+				margin: 0px;
+				padding: 0px;
 			}
-			#drag{
-				width:300px;
-				height:180px;
+			
+			#drag {
+				width: 300px;
+				height: 180px;
 				background: #fff;
 				border: 1px solid #eee;
 				border-radius: 4px;
 				position: absolute;
 			}
-			.head{
+			
+			.head {
 				background: #fafafa;
 				height: 36px;
 				line-height: 36px;
@@ -26,23 +29,27 @@
 				font-weight: normal;
 				word-spacing: 4;
 			}
-			.contains{
+			
+			.contains {
 				padding-top: 30px;
 				text-align: center;
 			}
-			.contains label{
-				font-size:18px;
+			
+			.contains label {
+				font-size: 18px;
 				line-height: 18px;
 			}
-			.contains input{
+			
+			.contains input {
 				height: 20px;
 				line-height: 20px;
 			}
 		</style>
 	</head>
+
 	<body>
 		<div id="drag">
-			<h4  id="head"  class="head">登录</h4>
+			<h4 id="head" class="head">登录</h4>
 			<div class="contains">
 				<label>账&nbsp;号:<input type="text" class="accountText" /></label><br/>
 				<br/>
@@ -50,32 +57,32 @@
 			</div>
 		</div>
 	</body>
+
 </html>
 <script type="text/javascript">
-	
-		var drag=document.getElementById("drag");
-		var head=document.getElementById("head");
-		var availWidth=screen.availWidth;
-		var availHeight=screen.availHeight;
-		drag.style.top=(availHeight-320)/2+'px';
-		drag.style.left=(availWidth-300)/2+'px';
-		var top,left;
-		head.onmousedown=function(e){
+	var drag = document.getElementById("drag");
+	var head = document.getElementById("head");
+	var availWidth = screen.availWidth;
+	var availHeight = screen.availHeight;
+	drag.style.top = (availHeight - 320) / 2 + 'px';
+	drag.style.left = (availWidth - 300) / 2 + 'px';
+	var top, left;
+	head.onmousedown = function(e) {
+		var e = e || window.event;
+		alert(e.pageX)
+		alert(e.clientX)
+		alert(e.screenX)
+		top = e.clientX - this.offsetLeft;
+		left = e.clientY - this.offsetTop;
+
+		head.onmousemove = function(e) {
 			var e = e || window.event;
-			alert(e.pageX)
-			alert(e.clientX)
-			alert(e.screenX)
-			top=e.clientX-this.offsetLeft;
-			left=e.clientY-this.offsetTop;
-		
-		head.onmousemove=function(e){
-			var e = e || window.event;
-			drag.style.left=e.clientX-left+'px';
-			drag.style.top=e.clientY-top+'px';
+			drag.style.left = e.clientX - left + 'px';
+			drag.style.top = e.clientY - top + 'px';
 		}
-		document.onmouseup=function(e){
+		document.onmouseup = function(e) {
 			head.onmousemove = null;
-            head.onmouseup = null;
+			head.onmouseup = null;
 		}
 	}
 </script>
